@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20200921 18:30:04.640" rpa="false">
+<suite id="s1" name="Buy Product" source="C:\teste automatizado\robo\teste\buy_product.robot">
+<test id="s1-t1" name="open ecomerce">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:05.350" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php?'.</msg>
+<status status="PASS" starttime="20200921 18:30:05.349" endtime="20200921 18:30:35.831"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:36.877" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:35.834" endtime="20200921 18:30:36.877"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:35.833" endtime="20200921 18:30:36.878"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:05.348" endtime="20200921 18:30:36.879" critical="yes"></status>
+</test>
+<test id="s1-t2" name="choice product">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="homefeatured"]/li[2]/div/div[2]/div[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20200921 18:30:36.916" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[2]/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200921 18:30:36.916" endtime="20200921 18:30:37.072"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${msgtxt}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:37.108" level="INFO">Current page contains text 'Product successfully added to your shopping cart'.</msg>
+<status status="PASS" starttime="20200921 18:30:37.073" endtime="20200921 18:30:37.108"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:37.559" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:37.110" endtime="20200921 18:30:37.559"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:37.110" endtime="20200921 18:30:37.560"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:36.914" endtime="20200921 18:30:37.561" critical="yes"></status>
+</test>
+<test id="s1-t3" name="send to cart">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css:[rel=nofollow]</arg>
+</arguments>
+<msg timestamp="20200921 18:30:37.578" level="INFO">Clicking element 'css:[rel=nofollow]'.</msg>
+<status status="PASS" starttime="20200921 18:30:37.577" endtime="20200921 18:30:39.003"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:40.367" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:39.008" endtime="20200921 18:30:40.367"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:39.007" endtime="20200921 18:30:40.367"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:37.575" endtime="20200921 18:30:40.368" critical="yes"></status>
+</test>
+<test id="s1-t4" name="register e-mail">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=email_create</arg>
+</arguments>
+<status status="PASS" starttime="20200921 18:30:40.377" endtime="20200921 18:30:40.429"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email_create</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:40.430" level="INFO">Typing text 'teste.robots@execution.com' into text field 'id=email_create'.</msg>
+<status status="PASS" starttime="20200921 18:30:40.430" endtime="20200921 18:30:40.688"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="SubmitCreate"]</arg>
+</arguments>
+<msg timestamp="20200921 18:30:40.691" level="INFO">Clicking element 'xpath=//*[@id="SubmitCreate"]'.</msg>
+<status status="PASS" starttime="20200921 18:30:40.690" endtime="20200921 18:30:40.824"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:41.144" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:40.826" endtime="20200921 18:30:41.144"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:40.825" endtime="20200921 18:30:41.144"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:40.375" endtime="20200921 18:30:41.145" critical="yes"></status>
+</test>
+<test id="s1-t5" name="create account">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="account-creation_form"]</arg>
+</arguments>
+<status status="PASS" starttime="20200921 18:30:41.154" endtime="20200921 18:30:44.631"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=id_gender1</arg>
+</arguments>
+<msg timestamp="20200921 18:30:44.633" level="INFO">Clicking element 'id=id_gender1'.</msg>
+<status status="PASS" starttime="20200921 18:30:44.632" endtime="20200921 18:30:44.770"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=customer_firstname</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:44.771" level="INFO">Typing text 'teste' into text field 'id=customer_firstname'.</msg>
+<status status="PASS" starttime="20200921 18:30:44.771" endtime="20200921 18:30:45.865"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=customer_lastname</arg>
+<arg>${lname}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:45.867" level="INFO">Typing text 'teste' into text field 'id=customer_lastname'.</msg>
+<status status="PASS" starttime="20200921 18:30:45.866" endtime="20200921 18:30:46.052"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=passwd</arg>
+<arg>${pass}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:46.055" level="INFO">Typing text '123456pass' into text field 'id=passwd'.</msg>
+<status status="PASS" starttime="20200921 18:30:46.054" endtime="20200921 18:30:46.315"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>id=days</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200921 18:30:46.317" level="INFO">Selecting options from selection list 'id=days' by value 1.</msg>
+<status status="PASS" starttime="20200921 18:30:46.317" endtime="20200921 18:30:47.495"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>id=months</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200921 18:30:47.497" level="INFO">Selecting options from selection list 'id=months' by value 1.</msg>
+<status status="PASS" starttime="20200921 18:30:47.497" endtime="20200921 18:30:47.849"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>id=years</arg>
+<arg>1992</arg>
+</arguments>
+<msg timestamp="20200921 18:30:47.850" level="INFO">Selecting options from selection list 'id=years' by value 1992.</msg>
+<status status="PASS" starttime="20200921 18:30:47.849" endtime="20200921 18:30:47.995"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=address1</arg>
+<arg>${street}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:47.996" level="INFO">Typing text 'Street teste' into text field 'id=address1'.</msg>
+<status status="PASS" starttime="20200921 18:30:47.996" endtime="20200921 18:30:48.255"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=address2</arg>
+<arg>${street2}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:48.257" level="INFO">Typing text 'apart' into text field 'id=address2'.</msg>
+<status status="PASS" starttime="20200921 18:30:48.256" endtime="20200921 18:30:48.446"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=city</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:48.448" level="INFO">Typing text 'cidade' into text field 'id=city'.</msg>
+<status status="PASS" starttime="20200921 18:30:48.447" endtime="20200921 18:30:48.656"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>id=id_state</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:48.658" level="INFO">Selecting options from selection list 'id=id_state' by value 3.</msg>
+<status status="PASS" starttime="20200921 18:30:48.657" endtime="20200921 18:30:48.940"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=postcode</arg>
+<arg>${cep}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:48.942" level="INFO">Typing text '00000' into text field 'id=postcode'.</msg>
+<status status="PASS" starttime="20200921 18:30:48.941" endtime="20200921 18:30:49.177"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=phone_mobile</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:49.179" level="INFO">Typing text '000000000' into text field 'id=phone_mobile'.</msg>
+<status status="PASS" starttime="20200921 18:30:49.178" endtime="20200921 18:30:49.419"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=alias</arg>
+<arg>${street}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:49.421" level="INFO">Typing text 'Street teste' into text field 'id=alias'.</msg>
+<status status="PASS" starttime="20200921 18:30:49.420" endtime="20200921 18:30:49.698"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=submitAccount</arg>
+</arguments>
+<msg timestamp="20200921 18:30:49.700" level="INFO">Clicking element 'id=submitAccount'.</msg>
+<status status="PASS" starttime="20200921 18:30:49.700" endtime="20200921 18:30:52.428"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:52.727" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:52.431" endtime="20200921 18:30:52.727"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:52.430" endtime="20200921 18:30:52.727"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:41.152" endtime="20200921 18:30:52.728" critical="yes"></status>
+</test>
+<test id="s1-t6" name="checkout shopping cart">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="cart_summary"]/tbody</arg>
+</arguments>
+<msg timestamp="20200921 18:30:52.782" level="INFO">Element 'xpath=//*[@id="cart_summary"]/tbody' is displayed.</msg>
+<status status="PASS" starttime="20200921 18:30:52.737" endtime="20200921 18:30:52.782"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]/p[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20200921 18:30:52.793" level="INFO">Clicking element 'xpath=//*[@id="center_column"]/p[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200921 18:30:52.793" endtime="20200921 18:30:55.584"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:55.902" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:55.588" endtime="20200921 18:30:55.902"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:55.587" endtime="20200921 18:30:55.903"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:52.735" endtime="20200921 18:30:55.903" critical="yes"></status>
+</test>
+<test id="s1-t7" name="confirm address">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:55.945" level="INFO">Current page contains text 'teste'.</msg>
+<status status="PASS" starttime="20200921 18:30:55.912" endtime="20200921 18:30:55.945"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${lname}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:55.969" level="INFO">Current page contains text 'teste'.</msg>
+<status status="PASS" starttime="20200921 18:30:55.946" endtime="20200921 18:30:55.969"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:56.020" level="INFO">Current page contains text 'cidade'.</msg>
+<status status="PASS" starttime="20200921 18:30:55.975" endtime="20200921 18:30:56.021"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20200921 18:30:56.051" level="INFO">Current page contains text '000000000'.</msg>
+<status status="PASS" starttime="20200921 18:30:56.021" endtime="20200921 18:30:56.051"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]/form/p/button</arg>
+</arguments>
+<msg timestamp="20200921 18:30:56.053" level="INFO">Clicking element 'xpath=//*[@id="center_column"]/form/p/button'.</msg>
+<status status="PASS" starttime="20200921 18:30:56.052" endtime="20200921 18:30:57.897"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:30:58.236" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:57.900" endtime="20200921 18:30:58.236"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:57.899" endtime="20200921 18:30:58.237"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:55.910" endtime="20200921 18:30:58.238" critical="yes"></status>
+</test>
+<test id="s1-t8" name="agree terms of service">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=cgv</arg>
+</arguments>
+<msg timestamp="20200921 18:30:58.250" level="INFO">Clicking element 'id=cgv'.</msg>
+<status status="PASS" starttime="20200921 18:30:58.249" endtime="20200921 18:30:58.398"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=processCarrier</arg>
+</arguments>
+<msg timestamp="20200921 18:30:58.400" level="INFO">Clicking element 'name=processCarrier'.</msg>
+<status status="PASS" starttime="20200921 18:30:58.399" endtime="20200921 18:30:59.675"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:31:00.625" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:30:59.679" endtime="20200921 18:31:00.626"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:59.677" endtime="20200921 18:31:00.626"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:30:58.246" endtime="20200921 18:31:00.627" critical="yes"></status>
+</test>
+<test id="s1-t9" name="payment method">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=page-heading</arg>
+</arguments>
+<assign>
+<var>${paiment_v}</var>
+</assign>
+<msg timestamp="20200921 18:31:00.716" level="INFO">${paiment_v} = PLEASE CHOOSE YOUR PAYMENT METHOD</msg>
+<status status="PASS" starttime="20200921 18:31:00.660" endtime="20200921 18:31:00.716"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${paiment_v}</arg>
+<arg>${paiment}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 18:31:00.717" endtime="20200921 18:31:00.718"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a</arg>
+</arguments>
+<msg timestamp="20200921 18:31:00.719" level="INFO">Clicking element 'xpath=//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'.</msg>
+<status status="PASS" starttime="20200921 18:31:00.718" endtime="20200921 18:31:02.159"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:31:02.470" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:31:02.161" endtime="20200921 18:31:02.470"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:02.160" endtime="20200921 18:31:02.470"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:00.635" endtime="20200921 18:31:02.471" critical="yes"></status>
+</test>
+<test id="s1-t10" name="confirm bank wire">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="amount"]</arg>
+</arguments>
+<assign>
+<var>${v_value}</var>
+</assign>
+<msg timestamp="20200921 18:31:02.544" level="INFO">${v_value} = $29.00</msg>
+<status status="PASS" starttime="20200921 18:31:02.480" endtime="20200921 18:31:02.544"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${v_value}</arg>
+<arg>${Value}</arg>
+</arguments>
+<status status="PASS" starttime="20200921 18:31:02.545" endtime="20200921 18:31:02.546"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="cart_navigation"]/button</arg>
+</arguments>
+<msg timestamp="20200921 18:31:02.547" level="INFO">Clicking element 'xpath=//*[@id="cart_navigation"]/button'.</msg>
+<status status="PASS" starttime="20200921 18:31:02.546" endtime="20200921 18:31:04.986"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:31:05.298" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:31:04.989" endtime="20200921 18:31:05.298"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:04.988" endtime="20200921 18:31:05.299"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:02.478" endtime="20200921 18:31:05.300" critical="yes"></status>
+</test>
+<test id="s1-t11" name="end process">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${confirm}</arg>
+</arguments>
+<msg timestamp="20200921 18:31:05.357" level="INFO">Current page contains text 'Your order on My Store is complete.'.</msg>
+<status status="PASS" starttime="20200921 18:31:05.318" endtime="20200921 18:31:05.357"></status>
+</kw>
+<kw name="encerrar seção" library="ressources" type="teardown">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200921 18:31:05.667" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200921 18:31:05.360" endtime="20200921 18:31:05.667"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:05.358" endtime="20200921 18:31:05.667"></status>
+</kw>
+<status status="PASS" starttime="20200921 18:31:05.317" endtime="20200921 18:31:05.668" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200921 18:30:04.655" endtime="20200921 18:31:05.678"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0">Critical Tests</stat>
+<stat pass="11" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" id="s1" name="Buy Product">Buy Product</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200921 18:30:04.656" level="ERROR">Error in test case file 'C:\teste automatizado\robo\teste\buy_product.robot': Creating keyword ' #' failed: Keyword with same name defined multiple times.</msg>
+</errors>
+</robot>
